@@ -109,7 +109,7 @@ li{
         font-size: 1.5rem;
     }
 
-    /* Experience Section */
+/* Experience Section */
     #experience{
         position: relative;
         z-index: 5;
@@ -122,8 +122,13 @@ li{
     .experience-task{
         text-align: left;
     }
+/* Education Section */
 
-
+    .bold-education{
+        text-align: left;
+        font-weight: bold;
+        color: white;
+    }
 /* Feature Section */
     #features{
         position: relative;

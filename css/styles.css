@@ -158,12 +158,12 @@ li{
     }
 
     .icon{
-        color:#ef8172;
+        color:#173F5F;
         margin-bottom: 1rem;
     }
 
     .icon:hover{
-        color: #ff4c68;
+        color: rgb(44, 89, 126);
     }
 
     .testimonial-text{

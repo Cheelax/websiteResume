@@ -82,6 +82,12 @@ li{
     #title.container-fluid{
         padding: 3% 15% 7%;
     }
+    
+    .image-mountain
+    {
+        width: 146.40%;
+        height: auto;
+    }
 
 /* Navigation Bar */
     .navbar{

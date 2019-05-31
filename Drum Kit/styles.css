@@ -43,11 +43,6 @@ footer {
   background-image: url("images/kick.png");
 }
 
-.title{
-  font-weight: bold;
-  font-style: italic;
-}
-
 .set {
   margin: 10% auto;
 }

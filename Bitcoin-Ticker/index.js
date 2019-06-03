@@ -17,9 +17,6 @@ app.post("/" ,function(req,res){
     var fiat = req.body.fiat;
 
     var amount = req.body.amount
-    // var baseUrl="https://apiv2.bitcoinaverage.com/indices/global/ticker/"
-
-    // var finalUrl = baseUrl + crypto + fiat;
 
     var options = {
         url: "https://apiv2.bitcoinaverage.com/convert/global",

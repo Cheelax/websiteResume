@@ -1,10 +1,16 @@
 //jshint esversion: 6
 
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
 
 app.get("/", function(request, response){
-  response.send("<h1>Hello</h1>");
+  response.sendFile(__dirname+"/index.html");
+})
+
+app.post("/", function(req,res){
+  res.send(Number(req.body.num1)+Number(req.body.num2));
 })
 
 app.get("/contact", function(req,res){

@@ -18,22 +18,21 @@ app.post("/", function(req,res){
     var lastName = req.body.prenom;
     var email = req.body.email;
 
-    var data = {
-                email_address: email,
-                status: "subscribed"
+    var data ={
+                "email_address": email,
+                "status" : "subscribed"
             };
 
-    var jsonData = JSON.stringify(data);
+   // var jsonData = JSON.stringify(data);
 
     var options = {
-        headers :{
-            'Authorization': 'thomas c9e68ed1cad7a8547d65f290c32c4a9b-us20',
-            'Content-Type': 'application/json',
-            'Content-Length': jsonData.length
+        "url": "https://us20.api.mailchimp.com/3.0/lists/c9b9a6e109/members/",
+        "method": "POST",
+        "headers": {
+            "Authorization": "thomas c9e68ed1cad7a8547d65f290c32c4a9b-us20"
         },
-        url: "https://us20.api.mailchimp.com/3.0/lists/c9b9a6e109/members/",
-        method: "POST",
-        data:jsonData
+        "body": data,
+        "json": true
     };
 
     console.log(options);
@@ -41,10 +40,10 @@ app.post("/", function(req,res){
     request(options, function(error, response, body){
         if(error)
         {
-            console.log(error);
+            //console.log(error);
         }
         else{
-            console.log(response);
+           console.log(response);
         }
     })
 })

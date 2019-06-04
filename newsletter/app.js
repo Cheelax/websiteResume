@@ -23,8 +23,6 @@ app.post("/", function(req,res){
                 "status" : "subscribed"
             };
 
-   // var jsonData = JSON.stringify(data);
-
     var options = {
         "url": "https://us20.api.mailchimp.com/3.0/lists/c9b9a6e109/members/",
         "method": "POST",
@@ -40,7 +38,7 @@ app.post("/", function(req,res){
     request(options, function(error, response, body){
         if(error)
         {
-            //console.log(error);
+            console.log(error);
         }
         else{
            console.log(response);

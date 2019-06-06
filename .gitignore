@@ -79,3 +79,4 @@ yarn-error.log*
 *.suo
 *.ntvs*
 *.njsproj
+node_modules

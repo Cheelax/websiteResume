@@ -1,4 +1,5 @@
 //jshint esversion: 6
+const config = require('./config');
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -20,20 +21,22 @@ app.post("/", function(req,res){
 
     var data ={
                 "email_address": email,
-                "status" : "subscribed"
+                "status" : "subscribed",
+                "merge_fields": {
+                    FNAME:firstName,
+                    LNAME: lastName
+                }
             };
 
     var options = {
         "url": "https://us20.api.mailchimp.com/3.0/lists/c9b9a6e109/members/",
         "method": "POST",
         "headers": {
-            "Authorization": "thomas c9e68ed1cad7a8547d65f290c32c4a9b-us20"
+            "Authorization": "thomas "+ config.mailchimpKey
         },
         "body": data,
         "json": true
     };
-
-    console.log(options);
 
     request(options, function(error, response, body){
         if(error)
@@ -49,7 +52,3 @@ app.post("/", function(req,res){
 app.get("/",function(req,res){
     res.sendFile(__dirname + "/signup.html")
 })
-
-//API Key c9e68ed1cad7a8547d65f290c32c4a9b-us20 todo change and anonimize api key
-
-//list id c9b9a6e109

@@ -1,4 +1,5 @@
 //jshint esversion: 6
+const config = require('./config');
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -18,7 +19,34 @@ app.post("/", function(req,res){
     var lastName = req.body.prenom;
     var email = req.body.email;
 
-    console.log(firstName + "  " + lastName + "  " + email);
+    var data ={
+                "email_address": email,
+                "status" : "subscribed",
+                "merge_fields": {
+                    FNAME:firstName,
+                    LNAME: lastName
+                }
+            };
+
+    var options = {
+        "url": "https://us20.api.mailchimp.com/3.0/lists/c9b9a6e109/members/",
+        "method": "POST",
+        "headers": {
+            "Authorization": "thomas "+ config.mailchimpKey
+        },
+        "body": data,
+        "json": true
+    };
+
+    request(options, function(error, response, body){
+        if(error)
+        {
+            console.log(error);
+        }
+        else{
+           console.log(response);
+        }
+    })
 })
 
 app.get("/",function(req,res){

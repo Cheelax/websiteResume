@@ -74,6 +74,10 @@ li{
         position: absolute;
         right: 30%;
     }
+    
+    .title{
+        font-weight: bold;
+    }
 
     #title{
         text-align: left;
@@ -210,12 +214,6 @@ li{
 
 /* CTA section */
 
-  .myprojects-heading{
-      font-family: "Montserrat";
-      font-size: 500%;
-      line-height: 1.5;
-      margin-bottom: 3rem;
-  }
 
   .white-text{
       Color : white;

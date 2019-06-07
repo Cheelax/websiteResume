@@ -1,6 +1,8 @@
 # VsCode
 .vscode/*
 
+config.js
+
 ### Node ###
 # Logs
 logs

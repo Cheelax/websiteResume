@@ -45,5 +45,4 @@ app.get("/", function(req,res) {
        res.render("list",{ day: day});
        res.send();
     }
-   
 )

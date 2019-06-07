@@ -18,9 +18,9 @@ app.get("/", function(req,res) {
     
     var today = new Date();
 
-    var options = { weekday: 'string', year: 'numeric', month: 'string', day: 'numeric' };
+    var options = { weekday: 'long', month: 'long', day: 'numeric' };
 
-    var day= today.toLocaleDateString("fr-FR");
+    var day= today.toLocaleDateString("fr-FR",options);
 
        res.render("list",{ day: day, newListItems: items});
        console.log(today);

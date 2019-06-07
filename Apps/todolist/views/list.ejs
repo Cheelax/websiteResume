@@ -7,5 +7,10 @@
   </head>
 
   <body>
-    <h1>C'est <%= day %> </h1>
+
+    <% if(day === "Samedi" || day === "Dimanche") { %>
+        <h1 style="color: purple">Liste de <%= day %> </h1>
+   <%  } else{ %>
+        <h1 style="color: blue">Liste de <%= day %> </h1>
+    <% } %>
 </html>

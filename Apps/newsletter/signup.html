@@ -30,19 +30,18 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="/signin.css" rel="stylesheet">
+    <link href="/Apps/newsletter/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
-  <form action="/" class="form-signin" method="POST">
-  <!-- <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
-  <h1 class="h3 mb-3 font-weight-normal">Recevez toutes les dernières mises à jour!</h1>
-  <input type="text" name="nom" class="form-control top" placeholder="Nom" required autofocus>
-  <input type="text" name="prenom" class="form-control middle" placeholder="Prénom" required>
-  <input type="email" name="email" class="form-control bottom" placeholder="Addresse Email" required>
-  <label for="inputPassword" class="sr-only">Password</label>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">M'inscrire</button>
-  <p class="mt-5 mb-3 text-muted">&copy; Thomas Belloc</p>
-  <script type='text/javascript' src='/newsletter/config.js'></script>
-</form>
+  <form action="/Newsletter/" class="form-signin" method="POST">
+    <h1 class="h3 mb-3 font-weight-normal">Recevez toutes les dernières mises à jour!</h1>
+    <input type="text" name="nom" class="form-control top" placeholder="Nom" required autofocus>
+    <input type="text" name="prenom" class="form-control middle" placeholder="Prénom" required>
+    <input type="email" name="email" class="form-control bottom" placeholder="Addresse Email" required>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">M'inscrire</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Thomas Belloc</p>
+    <script type='text/javascript' src='/Apps/newsletter/config.js'></script>
+  </form>
 </body>
 </html>

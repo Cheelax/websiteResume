@@ -19,7 +19,7 @@ app.get("/", function(req,res) {
     
     var today = new Date();
 
-    var options = { weekday: 'long', month: 'long', day: 'numeric' };
+    var options = {weekday: 'long',day: 'numeric',month: 'long'};
 
     var day= today.toLocaleDateString("fr-FR",options);
 

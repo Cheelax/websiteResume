@@ -4,27 +4,24 @@
   <head>
     <meta charset="utf-8">
     <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>
+    <div class="box" id="heading">   
+        <h1>Liste de <%= listTitle %> </h1>
+  </div>
 
-    <% if(day === "Samedi" || day === "Dimanche") { %>
-        <h1 style="color: purple">Liste de <%= day %> </h1>
-   <%  } else{ %>
-        <h1 style="color: blue">Liste de <%= day %> </h1>
-    <% } %>
-
-    <ul>
-      <li>Acheter à manger</li>
-      <li>Cuisiner à manger</li>
-      <li>manger</li>
+  <div class="box">
       <% for(var i=0;i<newListItems.length;i++) { %>
-        <li> <%= newListItems[i] %></li>
+        <div class="item">
+          <input type="checkbox">
+          <p> <%= newListItems[i] %></p>
+        </div>
       <% } %>
-    </ul>
-
-    <form class="" action="/" method="POST">
-      <input type="text" name="newItem">
-      <button type="submit" name="button">Add</button>
+      <form class="item" action="/" method="POST">
+      <input type="text" name="newItem" placeholder="Nouvel objet" autocomplete="off">
+      <button type="submit" name="list" value=<%= listTitle %>>+</button>
     </form>
+  </div>
 </html>
